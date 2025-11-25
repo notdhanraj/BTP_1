@@ -1,1 +1,8 @@
-# Empty file
+pandas
+numpy
+scikit-learn
+joblib
+openpyxl
+streamlit
+pyngrok
+matplotlib# Empty file
