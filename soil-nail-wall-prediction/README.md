@@ -61,43 +61,31 @@ soil-nail-wall-prediction/
 ├── app.py                    # The Streamlit web application
 ├── requirements.txt          # List of dependencies
 └── README.md                 # Project documentation
+```
 ⚙️ Setup and Installation
+
 Follow these steps to run the project locally on your machine.
 
 1. Clone the Repository
-Bash
-
-git clone [https://github.com/YOUR_USERNAME/soil-nail-wall-prediction.git](https://github.com/YOUR_USERNAME/soil-nail-wall-prediction.git)
-cd soil-nail-wall-prediction
-2. Create a Virtual Environment (Optional but Recommended)
-Bash
-
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# Mac/Linux
-python3 -m venv venv
-source venv/bin/activate
-3. Install Dependencies
-Bash
-
-pip install -r requirements.txt
-4. Train the Model
+   ```text
+   git clone [https://github.com/YOUR_USERNAME/soil-nail-wall-prediction.git](https://github.com/YOUR_USERNAME/soil-nail-wall-prediction.git)
+   cd soil-nail-wall-prediction
+   ```
+2. Install Dependencies
+   ```text
+   pip install -r requirements.txt
+   ```
+3. Train the Model
 Before running the app, you need to train the model to generate the .pkl file.
+  ```text
+  python src/train_model.py
+  ```
+4. Run the Application
+  ```text
+  streamlit run app.py
+  ```
+## 🧠 Model Methodology
 
-Bash
-
-python src/train_model.py
-You should see a message confirming that the model has been saved to models/model_pipeline.pkl.
-
-5. Run the Application
-Bash
-
-streamlit run app.py
-The application will open in your default web browser at http://localhost:8501.
-
-🧠 Model Methodology
 Preprocessing: The data is split into training (80%) and testing (20%) sets.
 
 Scaling: A StandardScaler is used to normalize the feature values.
